@@ -1,0 +1,406 @@
+/*
+  Josh's Custom CSS Reset
+  https://www.joshwcomeau.com/css/custom-css-reset/
+*/
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  z-index: 100;
+}
+
+*:not(dialog) {
+  margin: 0;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    interpolate-size: allow-keywords;
+  }
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+input, button, textarea, select {
+  font: inherit;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+p {
+  text-wrap: pretty;
+}
+h1, h2, h3, h4, h5, h6 {
+  text-wrap: balance;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+#root, #__next {
+  isolation: isolate;
+}
+
+
+
+/*
+  Proper styling
+  Goes below here
+*/
+
+html {
+  scroll-behavior: smooth;
+}
+
+body { 
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  font-family: "Corben", serif;
+}
+
+header {
+  z-index: 200 !important;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  align-content: space-between;
+  gap: 1vw;
+  width: 100vw;
+  padding: 1vw;
+  background: linear-gradient(to right, rgba(255, 255, 255, 1) 0%,rgba(238, 174, 202, 0.5) 50%, rgba(255, 255, 255, 1) 100%);
+  border-bottom: solid 1px #000;
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+}
+
+nav { 
+  display: none;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-items: center;
+  align-content: center;
+  gap: 1vw;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  width: 100vw;
+}
+
+section {
+  padding-top: 2vw;
+  padding-bottom: 10vh;
+}
+
+footer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  align-content: space-between;
+  gap: 1vw;
+  width: 100vw;
+  padding: 1vw;
+  background: #48384C;
+  padding: 1em;
+  color: #FFF;
+}
+
+h1, h2 {
+  font-family: "Barrio";
+  font-weight: 400;
+  font-style: normal;
+  text-align: center;
+}
+
+h3 {
+  font-family: "Aboreto";
+  font-weight: 400;
+  font-style: normal;
+  text-align: center;
+}
+
+dialog::backdrop {
+  background: rgba(0, 0, 0, 0.6);
+}
+
+button, .button {
+  border-radius: 2em;
+  background: rgb(68, 53, 72);
+  border: solid 1px rgb(68, 53, 72);
+  color: #FFF;
+  padding: 0.7em 1em 1em 1em;
+  line-height: 1em;
+  size: 1em;
+  vertical-align: middle;
+  text-align: center;
+  cursor: pointer;
+}
+
+button:hover, .button:hover {
+  background: #fff;
+  color: rgb(68, 53, 72);
+}
+
+.dialog-img {
+  cursor: pointer;
+}
+
+#zoom-img {
+  margin-bottom: 2vh;
+  max-height: 80vh;
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(3vh);
+  transition: all 0.8s ease-out;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.center-row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  align-content: center;
+  gap: 3vw;
+}
+
+.left-row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  align-content: flex-start;
+  gap: 1vw;
+}
+
+.between-row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  align-content: flex-start;
+  gap: 1vw;
+}
+
+.center-col {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  gap: 3vw;
+}
+
+.left-col {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  align-content: flex-start;
+  gap: 1vw;
+}
+
+.rule-header {
+  text-align: left !important;
+  font-family: "Cherry Bomb One", system-ui !important;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+  font-size: 2em !important;
+}
+
+#will-draw-header {
+  color: #48D18E;
+}
+
+#wont-draw-header {
+  color: #FF8683;
+}
+
+#welcome {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  gap: 1vw;
+  width: 100vw;
+  background: #f7f4f4;
+  padding: 3vw;
+}
+
+#welcome-blurb img, #welcome-blurb p {
+    width: 28vw;
+}
+
+#welcome-blurb img, #prices-blurb img {
+    height: 10vw;
+}
+
+@media screen and (max-width: 600px) {
+  #welcome-blurb img {
+    display: none;
+  }
+
+  #welcome-blurb p {
+    width: 90vw;
+  }
+}
+
+#gallery {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  gap: 1vw;
+}
+
+#gallery img {
+  width: 20vw;
+  height: 20vw;
+  object-position: center;
+  object-fit: cover;
+}
+
+#prices-blurb h1 {
+  display: block;
+  background-image: url('../assets/cloud.svg');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  padding: 1vw;
+}
+
+#price-types {
+  align-items: flex-end !important;
+}
+
+.price-type-img {
+  max-height: 40vh;
+  margin-bottom: 1vh;
+}
+
+.price-example-img {
+  max-height: 60vh;
+  margin-bottom: 1vh;
+}
+
+#price-type-headshot img {
+  width: 15vw !important;
+}
+
+#price-type-headshot img:nth-child(2) {
+  transform: translateY(-5vh);
+}
+
+@media screen and (max-width: 600px) {
+  #prices-blurb {
+    margin-bottom: 10vh !important;
+  }
+  
+  #price-type-headshot img {
+    width: 40vw !important;
+  }
+}
+
+#rules {
+  background: #CFE0FF;
+  width: 100vw;
+}
+
+#rules span {
+  font-size: 1em;
+}
+
+@media screen and (max-width: 600px) {
+  #rules .center-row {
+    flex-direction: column;
+  }
+}
+
+#howto {
+  display: grid;
+  grid-template-areas: 
+    "header process feature feature"
+    "header process feature feature"
+    "disclaimers disclaimers feature feature";
+  padding-left: 1vw;
+  padding-right: 0 !important;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+  background: #FFF9F9;
+  padding-bottom: 10vh;
+}
+
+@media screen and (max-width: 600px) {
+  #howto {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    gap: 3vw;
+  }
+}
+
+#howto h1 {
+  text-align: left !important;
+  font-family: "Cherry Bomb One", system-ui !important;
+  font-size: 2em !important;
+}
+
+#howto-header {
+  grid-area: header;
+}
+
+#howto-process {
+  grid-area: process;
+}
+
+#howto-feature {
+  grid-area: feature;
+}
+
+#howto-disclaimers {
+  grid-area: disclaimers;
+}
+
+#instagram {
+  height: 2em;
+}
